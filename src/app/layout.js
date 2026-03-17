@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import Link from "next/link";
+import './layout.css'
+import { Providers } from "@/redux/providers";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,7 +22,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        {/* <ul className="nav">
+          <li><Link href={'/'}>Home</Link></li>
+          <li><Link href={'/about'}>About</Link></li>
+          <li><Link href={'/login'}>Login</Link></li>
+        </ul> */}
+        <Providers>
+          {children}
+        </Providers>
+
       </body>
     </html>
   );
