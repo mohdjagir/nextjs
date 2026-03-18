@@ -4,7 +4,7 @@ function StudentLogin() {
   return (
     <div>
     <h1>Student Login Page Details</h1>
-    <Link href={"/login"}>go to logins</Link>
+    <Link href={"/login"}>go to login details</Link>
     </div>
   )
 }
